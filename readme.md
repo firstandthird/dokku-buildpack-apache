@@ -8,12 +8,18 @@ Use
 
 For new apps:
 ```bash
-$ heroku create --stack cedar --buildpack https://github.com/stevenosloan/heroku-buildpack-ruby.git
+$ heroku create --stack cedar --buildpack https://github.com/firstandthird/heroku-buildpack-ruby.git
 ```
 
 For existing apps:
 ```bash
-$ heroku config:add BUILDPACK_URL=https://github.com/stevenosloan/heroku-buildpack-apache.git
+$ heroku config:add BUILDPACK_URL=https://github.com/firstandthird/heroku-buildpack-apache.git
+```
+
+For dokku:
+In your root directory, create a file called `.env` with the following contents:
+```bash
+BUILDPACK_URL=https://github.com/firstandthird/heroku-buildpack-apache.git
 ```
 
 Basic Authentication
